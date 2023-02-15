@@ -2,6 +2,7 @@ import { Facebook, FmdGood, Instagram, MailOutline, Phone, Pinterest, Twitter } 
 import styled from "styled-components";
 import logo from "../Images/logo.png";
 import { mobile } from "../responsive";
+import {Link} from "react-router-dom"
 const Container = styled.div`
   display: flex;
   ${mobile({flexDirection:"column"})}
@@ -65,6 +66,20 @@ const ContactItem = styled.div`
     align-items: center;
     margin-bottom: 20px;
 `
+const JoinBtm = styled.button`
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: teal;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+`
 const Footer = () => {
   return (
     <Container>
@@ -115,6 +130,11 @@ const Footer = () => {
           </ContactItem>
           <ContactItem>
              <MailOutline style={{marginRight:"10px"}}/> codingRavi@gmail.com
+          </ContactItem>
+          <ContactItem>
+             <Link to="/customer/join">
+             <JoinBtm> Join Support </JoinBtm>
+             </Link>
           </ContactItem>
       </Right>
     </Container>

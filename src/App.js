@@ -9,6 +9,8 @@ import Cart from "./pages/Cart";
 import Success from "./pages/Success";
 import { useSelector } from "react-redux";
 import Search from "./pages/Search";
+import JoinHome from "./pages/JoinHome";
+import ChatLobby from "./pages/ChatLobby";
 const App = () => {
   const user = useSelector(state=>state.user.currentUser);
   return (
@@ -22,6 +24,8 @@ const App = () => {
         <Route path="/register" element={user?<Home/>:<Register />} />
         <Route path="/search" element={<Search/>} />
         <Route path="/success" element={<Success/>} />
+        <Route path="/customer/join" element={<JoinHome/>}></Route>
+        <Route path="/chatlobby/:name" element={<ChatLobby/>}></Route>
       </Routes>
     </>
   );

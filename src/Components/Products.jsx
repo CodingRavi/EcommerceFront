@@ -1,5 +1,5 @@
 import Product from "./Product"
-import { popularProducts } from "../Data"
+// import { popularProducts } from "../Data"
 import styled from "styled-components"
 import { useEffect, useState } from "react"
 import { publicrequest } from "../requestMethods"
