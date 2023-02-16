@@ -71,7 +71,7 @@ const JoinBtm = styled.button`
   height: 40px;
   border-radius: 20px;
   background-color: teal;
-  color: white;
+  color: #ffffff;
   outline: none;
   border: none;
   cursor: pointer;

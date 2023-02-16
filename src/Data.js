@@ -80,3 +80,5 @@ export const sliderItems = [
       img:"https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
     },
   ]
+
+  export  const lodingPreloder = [1,2,3,4,5,6,7,8]

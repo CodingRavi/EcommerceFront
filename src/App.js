@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import Search from "./pages/Search";
 import JoinHome from "./pages/JoinHome";
 import ChatLobby from "./pages/ChatLobby";
+import LodingProduct from "./Components/LodingProduct";
 const App = () => {
   const user = useSelector(state=>state.user.currentUser);
   return (

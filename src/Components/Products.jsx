@@ -1,9 +1,9 @@
 import Product from "./Product"
-// import { popularProducts } from "../Data"
 import styled from "styled-components"
 import { useEffect, useState } from "react"
 import { publicrequest } from "../requestMethods"
 import { useSelector } from "react-redux"
+import LodingProduct from "./LodingProduct"
 const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -61,6 +61,7 @@ const Products = ({ cat, filters, sort }) => {
     return (
         <Container>
             {
+                products.length > 0 ?
                 cat ? filterProducts.map((item) => {
                     return (
                         <Product item={item} key={item.id} />
@@ -69,7 +70,7 @@ const Products = ({ cat, filters, sort }) => {
                     return (
                         <Product item={item} key={item.id} />
                     )
-                })
+                }) : <LodingProduct/>
             }
 
         </Container>
