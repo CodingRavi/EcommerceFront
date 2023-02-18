@@ -57,11 +57,12 @@ const Newsletter = () => {
 
     async function sendMail() {
       const data = await userRequest.post("/mail/send", {mail: mail});
-      console.log(data);
+      setmailStatus(data.data);
     }
     
     sendMail();
   }
+  // console.log(mailStatus);
   return (
     <Container>
         <Title>Newsletter</Title>
