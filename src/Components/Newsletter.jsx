@@ -1,7 +1,7 @@
 import { Send } from "@mui/icons-material"
 import { useState } from "react"
 import styled from "styled-components"
-import { userRequest } from "../requestMethods"
+import { publicrequest} from "../requestMethods"
 import { mobile } from "../responsive"
 
 const Container = styled.div`
@@ -56,12 +56,14 @@ const Newsletter = () => {
     e.preventDefault()
 
     async function sendMail() {
-      const data = await userRequest.post("/mail/send", {mail: mail});
+      const data = await publicrequest.post("/mail/send", {mail: mail});
       setmailStatus(data.data);
     }
     
     sendMail();
   }
+  console.log(mailStatus);
+  console.log(mail);
   // console.log(mailStatus);
   return (
     <Container>
